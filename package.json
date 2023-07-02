@@ -1,41 +1,62 @@
 {
-  "name": "micro_frontend",
-  "version": "0.0.1",
-  "scripts": {
-    "build": "pnpm --parallel --filter \"./**\" build",
-    "serve": "pnpm --parallel --filter \"./**\" preview",
-    "build:remotes": "pnpm --parallel --filter \"./remote\" build",
-    "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
-    "dev:hosts": "pnpm --filter \"./host\" dev",
-    "stop": "kill-port --port 5000,5001"
-  },
-  "devDependencies": {
-    "@originjs/vite-plugin-federation": "^1.2.3",
-    "@types/eslint": "^8",
-    "@types/prettier": "^2",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-import-resolver-typescript": "^3.5.5",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-jsx-a11y": "^6.7.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "kill-port": "^2.0.1",
-    "postcss": "^8.4.24",
-    "postcss-markdown": "^1.2.0",
-    "postcss-syntax": "^0.36.2",
-    "prettier": "^2.8.8",
-    "stylelint": "^15.9.0",
-    "stylelint-a11y": "^1.2.3",
-    "stylelint-config-clean-order": "^5.0.1",
-    "stylelint-config-recommended": "^12.0.0",
-    "stylelint-high-performance-animation": "^1.8.0",
-    "stylelint-selector-no-empty": "^1.0.9",
-    "typescript": "^5.1.6"
-  },
-  "volta": {
-    "node": "18.16.1",
-    "yarn": "3.6.1"
-  },
-  "packageManager": "yarn@3.6.1"
+    "name": "micro_frontend",
+    "version": "0.0.1",
+    "description": "project use yarn 3 and vite based micro frontend plugin",
+    "homepage": "https://github.com/blackskip-notOk/microfrontend",
+    "license": "UNLICENSED",
+    "author": {
+        "name": "Ilya Babanov",
+        "email": "ilbabanov@gmail.com",
+        "url": "https://github.com/blackskip-notOk"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/blackskip-notOk/microfrontend.git"
+    },
+    "scripts": {
+        "build": "pnpm --parallel --filter \"./**\" build",
+        "serve": "pnpm --parallel --filter \"./**\" preview",
+        "build:remotes": "pnpm --parallel --filter \"./remote\" build",
+        "serve:remotes": "pnpm --parallel --filter \"./remote\" serve",
+        "dev:hosts": "pnpm --filter \"./host\" dev",
+        "stop": "kill-port --port 5000,5001"
+    },
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "devDependencies": {
+        "@originjs/vite-plugin-federation": "^1.2.3",
+        "@types/eslint": "^8",
+        "@types/prettier": "^2",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "eslint": "^8.44.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-import-resolver-typescript": "^3.5.5",
+        "eslint-plugin-import": "^2.27.5",
+        "eslint-plugin-jsx-a11y": "^6.7.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "kill-port": "^2.0.1",
+        "postcss": "^8.4.24",
+        "postcss-markdown": "^1.2.0",
+        "postcss-syntax": "^0.36.2",
+        "prettier": "^2.8.8",
+        "stylelint": "^15.9.0",
+        "stylelint-a11y": "^1.2.3",
+        "stylelint-config-clean-order": "^5.0.1",
+        "stylelint-config-recommended": "^12.0.0",
+        "stylelint-high-performance-animation": "^1.8.0",
+        "stylelint-selector-no-empty": "^1.0.9",
+        "typescript": "^5.1.6"
+    },
+    "volta": {
+        "node": "18.16.1",
+        "yarn": "3.6.1"
+    },
+    "packageManager": "yarn@3.6.1",
+    "engines": {
+        "node": ">=18"
+    }
 }
