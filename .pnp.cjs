@@ -48,7 +48,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-clean-order", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:5.0.1"],\
             ["stylelint-config-recommended", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:12.0.0"],\
             ["stylelint-high-performance-animation", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.8.0"],\
-            ["stylelint-selector-no-empty", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.0.9"]\
+            ["stylelint-selector-no-empty", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.0.9"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -2893,7 +2894,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stylelint-config-clean-order", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:5.0.1"],\
             ["stylelint-config-recommended", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:12.0.0"],\
             ["stylelint-high-performance-animation", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.8.0"],\
-            ["stylelint-selector-no-empty", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.0.9"]\
+            ["stylelint-selector-no-empty", "virtual:795e95d33a6c86d6a7a6ecefee9b16cd059f4e76175f9134392b4fd18461cca224647bb01262714afb2ae0af046f44bc6bd1f9084789254233151226d879ec39#npm:1.0.9"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -4406,6 +4408,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["call-bind", "npm:1.0.2"],\
             ["for-each", "npm:0.3.3"],\
             ["is-typed-array", "npm:1.1.10"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["typescript", [\
+        ["patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071", {\
+          "packageLocation": "./.yarn/cache/typescript-patch-bd21d74a9d-f53bfe97f7.zip/node_modules/typescript/",\
+          "packageDependencies": [\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "HARD"\
         }]\
