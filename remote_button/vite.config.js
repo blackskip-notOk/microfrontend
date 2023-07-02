@@ -7,8 +7,8 @@ export default defineConfig(() => {
 		plugins: [
 			react(),
 			federation({
-				name: 'remote_app',
-				filename: 'remoteEntry.js',
+				name: 'remote_button',
+				filename: 'remoteEntryButton.js',
 				exposes: {
 					'./Button': './src/Button',
 				},
