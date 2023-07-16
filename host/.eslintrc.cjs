@@ -10,6 +10,7 @@ module.exports = {
 		'plugin:react/recommended',
 		'plugin:react/jsx-runtime',
 		'plugin:react-hooks/recommended',
+		'plugin:@tanstack/eslint-plugin-query/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:jsx-a11y/recommended',
 		'plugin:import/recommended',
@@ -27,7 +28,7 @@ module.exports = {
 		sourceType: 'module',
 	},
 	settings: {
-		'react': { version: '18.2' },
+		react: { version: '18.2' },
 		'import/resolver': {
 			node: {
 				extensions: ['.ts', '.tsx', '.d.ts'],
@@ -55,19 +56,19 @@ module.exports = {
 			'@typescript-eslint/parser': [ERROR, ['.ts', '.tsx', '.d.ts']],
 		},
 	},
-	plugins: ['react-refresh', 'react', 'react-hooks', '@typescript-eslint', 'jsx-a11y', 'import'],
+	plugins: ['react-refresh', 'react', 'react-hooks', '@tanstack/query', '@typescript-eslint', 'jsx-a11y', 'import'],
 	ignorePatterns: ['.eslintrc.cjs'],
 	rules: {
 		'react-hooks/rules-of-hooks': ERROR,
 		'react-hooks/exhaustive-deps': WARN,
 		'import/no-unresolved': ERROR,
 		'@typescript-eslint/no-explicit-any': ERROR,
-		'quotes': [ERROR, 'single', { avoidEscape: true }],
+		quotes: [ERROR, 'single', { avoidEscape: true }],
 		'jsx-quotes': [ERROR, 'prefer-single'],
 		'sort-vars': [WARN, { ignoreCase: true }],
 		'spaced-comment': [WARN, 'always', { exceptions: ['-', '+'], markers: ['/'] }],
 		'object-curly-spacing': [WARN, 'always'],
-		'semi': [WARN, 'always'],
+		semi: [WARN, 'always'],
 		'keyword-spacing': [WARN],
 		'react/jsx-sort-props': [
 			WARN,
@@ -80,17 +81,17 @@ module.exports = {
 		'import/order': [
 			WARN,
 			{
-				'groups': ['builtin', 'external', 'internal'],
-				'pathGroups': [
+				groups: ['builtin', 'external', 'internal'],
+				pathGroups: [
 					{
 						pattern: 'react',
 						group: 'external',
 						position: 'before',
 					},
 				],
-				'pathGroupsExcludedImportTypes': ['react'],
+				pathGroupsExcludedImportTypes: ['react'],
 				'newlines-between': 'always',
-				'alphabetize': {
+				alphabetize: {
 					order: 'asc',
 					caseInsensitive: true,
 				},
@@ -100,5 +101,7 @@ module.exports = {
 		'@typescript-eslint/consistent-type-imports': WARN,
 		'@typescript-eslint/no-unused-vars': [ERROR, { ignoreRestSiblings: true }],
 		'react-refresh/only-export-components': WARN,
+		'@tanstack/query/exhaustive-deps': ERROR,
+		'@tanstack/query/prefer-query-object-syntax': ERROR,
 	},
 };
