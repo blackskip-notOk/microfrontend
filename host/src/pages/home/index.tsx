@@ -1,4 +1,6 @@
-import { FC } from 'react';
+import { path } from '@pages/router';
+import type { FC } from 'react';
+
 import { Link, Outlet } from 'react-router-dom';
 
 export const HomePage: FC = () => {
@@ -8,7 +10,7 @@ export const HomePage: FC = () => {
 			<nav>
 				<ul>
 					<li>
-						<Link to='/server_info'>Server Info Page</Link>
+						<Link to={path.serverInfo}>Server Info Page</Link>
 					</li>
 				</ul>
 			</nav>

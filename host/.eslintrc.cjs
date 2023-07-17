@@ -4,7 +4,7 @@ const ERROR = 2;
 
 module.exports = {
 	root: true,
-	env: { browser: true, es2020: true, node: true },
+	env: { browser: true, es2023: true, node: true },
 	extends: [
 		'eslint:recommended',
 		'plugin:react/recommended',
@@ -27,6 +27,7 @@ module.exports = {
 		ecmaVersion: 'latest',
 		sourceType: 'module',
 	},
+	plugins: ['react', 'react-hooks', '@tanstack/query', '@typescript-eslint', 'jsx-a11y', 'import'],
 	settings: {
 		react: { version: '18.2' },
 		'import/resolver': {
@@ -35,17 +36,15 @@ module.exports = {
 			},
 			typescript: { alwaysTryTypes: true },
 			alias: {
-				extensions: ['.ts', '.tsx'],
+				extensions: ['.ts', '.tsx', '.d.ts'],
 				map: [
 					['@package.json', './package.json'],
 					['@global', './src/global'],
-					['@api', './src/app/api'],
-					['@components', './src/app/components'],
-					['@helpers', './src/app/helpers'],
-					['@hooks', './src/app/hooks'],
-					['@modules', './src/app/modules'],
-					['@pages', './src/app/pages'],
-					['@store', './src/app/store'],
+					['@app', './src/app/app'],
+					['@pages', './src/pages'],
+					['@features', './src/features'],
+					['@entities', './src/entities'],
+					['@shared', './src/shared'],
 					['@tests', './src/__tests__'],
 					['@', './src/'],
 					['~', './public/'],
@@ -56,8 +55,20 @@ module.exports = {
 			'@typescript-eslint/parser': [ERROR, ['.ts', '.tsx', '.d.ts']],
 		},
 	},
-	plugins: ['react-refresh', 'react', 'react-hooks', '@tanstack/query', '@typescript-eslint', 'jsx-a11y', 'import'],
 	ignorePatterns: ['.eslintrc.cjs'],
+	overrides: [
+		{
+			files: ['**/__tests__/*.{t}s?(x)', '**/*.spec.{t}s?(x)'],
+			extends: [
+				'plugin:vitest-globals/recommended',
+				'plugin:testing-library/react',
+				'plugin:jest-dom/recommended',
+			],
+			env: {
+				'vitest-globals/env': true,
+			},
+		},
+	],
 	rules: {
 		'react-hooks/rules-of-hooks': ERROR,
 		'react-hooks/exhaustive-deps': WARN,
@@ -97,10 +108,8 @@ module.exports = {
 				},
 			},
 		],
-		'import/no-named-as-default-member': OFF,
 		'@typescript-eslint/consistent-type-imports': WARN,
 		'@typescript-eslint/no-unused-vars': [ERROR, { ignoreRestSiblings: true }],
-		'react-refresh/only-export-components': WARN,
 		'@tanstack/query/exhaustive-deps': ERROR,
 		'@tanstack/query/prefer-query-object-syntax': ERROR,
 	},
