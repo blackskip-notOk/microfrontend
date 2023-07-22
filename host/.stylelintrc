@@ -6,7 +6,8 @@
 	],
 	"plugins": [
 		"stylelint-high-performance-animation",
-		"stylelint-selector-no-empty"
+		"stylelint-selector-no-empty",
+		"stylelint-gamut"
 	],
 	"defaultSeverity": "error",
 	"overrides": [
@@ -66,6 +67,7 @@
 		"selector-type-no-unknown": true,
 		"shorthand-property-no-redundant-values": true,
 		"unit-no-unknown": true,
-		"plugin/stylelint-selector-no-empty": true
+		"plugin/stylelint-selector-no-empty": true,
+		"gamut/color-no-out-gamut-range": true
 	}
 }
