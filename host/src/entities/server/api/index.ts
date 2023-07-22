@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import ky from 'ky';
 
-import { api } from '../../../global';
 import { keys, serverApi } from '../model';
+import { api } from '~global/index';
 
 export function useGetServerInfo() {
 	const serverInfo = useQuery({

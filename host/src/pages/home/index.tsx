@@ -1,4 +1,4 @@
-import { path } from '@pages/router';
+import { path } from '~pages/router';
 import type { FC } from 'react';
 
 import { Link, Outlet } from 'react-router-dom';
