@@ -2,22 +2,23 @@
 <style>
     @media (prefers-color-scheme: dark) {
         .a { fill: black }
-        .b { fill: #8c3a1d }
-        .c { fill: #7b351c }
-        .d { fill: #060505 }
+        .b { fill: #5b1c05 }
+        .c { fill: #521a05 }
+        .d { fill: #210d0d }
         .e { fill: #424345 }
-        .f { fill: #20c367 }
-        .g { fill: #0d87b3 }
-        .h { fill: #290a3d }
+        .f { fill: #045d2b }
+        .g { fill: #0c759c }
+        .h { fill: #390d57 }
 
         @media (color-gamut: p3) {
             .a { fill: oklch(55% 0.23 146) }
-            .b { fill: oklch(45.55% 0.119 39.14) }
-            .c { fill: oklch(41.98% 0.105 39.52) }
-            .d { fill: oklch(11.68% 0.003 17.53) }
+            .b { fill: oklch(32.35% 0.098 38.55) }
+            .c { fill: oklch(30.36% 0.089 39.26) }
+            .d { fill: oklch(18.98% 0.034 20.8) }
             .e { fill: oklch(38.26% 0.004 264.52) }
-            .f { fill: oklch(86.05% 0.167 155.57) }
-            .h { fill: oklch(22.9% 0.093 308.4) }
+            .f { fill: oklch(41.93% 0.111 151.04) }
+            .g { fill: oklch(52.81% 0.104 231.14) }
+            .h { fill: oklch(28.02% 0.124 306.78) }
         }
     }
 </style>
