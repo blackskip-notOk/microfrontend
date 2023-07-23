@@ -44,7 +44,6 @@
 		"declaration-block-no-shorthand-property-overrides": true,
 		"declaration-block-single-line-max-declarations": 1,
 		"declaration-no-important": true,
-		"declaration-property-value-no-unknown": true,
 		"function-calc-no-unspaced-operator": true,
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"function-url-no-scheme-relative": true,
@@ -68,6 +67,15 @@
 		"shorthand-property-no-redundant-values": true,
 		"unit-no-unknown": true,
 		"plugin/stylelint-selector-no-empty": true,
-		"gamut/color-no-out-gamut-range": true
+		"gamut/color-no-out-gamut-range": true,
+		"declaration-property-value-no-unknown": [
+			true,
+			{
+				"propertiesSyntax": {
+					"color": "<oklch>",
+					"background-color": "<oklch>"
+				}
+			}
+		]
 	}
 }
