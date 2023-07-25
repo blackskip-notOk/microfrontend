@@ -7,6 +7,8 @@ export const HomePage: FC = () => {
 	return (
 		<div>
 			<h1>Home Page</h1>
+			<h2>Home Page</h2>
+			<h3>Home Page</h3>
 			<nav>
 				<ul>
 					<li>
