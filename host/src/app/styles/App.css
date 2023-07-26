@@ -10,7 +10,7 @@ body {
 
 @supports (font-variation-settings: normal) {
   @font-face {
-    font-family: 'Decovar';
+    font-family: Decovar;
     src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype-variations');
     font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
     font-weight: 100 1000;
@@ -23,6 +23,16 @@ body {
     font-weight: 100 800;
     font-stretch: 75% 112.5%;
   }
+
+  @font-face {
+    font-family: Abelone;
+    src: url('../fonts/Abelone-FREE.otf') format('opentype-variations');
+  }
+
+  @font-face {
+    font-family: Noto;
+    src: url('../fonts/NotoColorEmoji-Regular.ttf') format('truetype-variations');
+  }
 }
 
 h1 {
@@ -32,12 +42,21 @@ h1 {
 }
 
 h2 {
-  font-family: Decovar, sans-serif;
+  font-family: Abelone, sans-serif;
   font-weight: 600;
-  font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 1000, "SKLB" 0, "TRMG" 0, "TRME" 0;
 }
 
 h3 {
   font-family: MartianMonoVF, sans-serif;
   font-weight: 600;
+}
+
+h4 {
+  font-family: Gilbert, sans-serif;
+  font-size: 64px;
+}
+
+h5 {
+  font-family: Noto, sans-serif;
+  font-size: 64px;
 }

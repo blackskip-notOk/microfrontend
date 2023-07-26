@@ -1,0 +1,38 @@
+.container {
+    display: grid;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+.title {
+    font-family: Decovar, sans-serif;
+    font-size: 64px;
+
+    animation: none;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+}
+
+.title {
+    font-family: Decovar, sans-serif;
+    font-size: 64px;
+    color: blue;
+
+    animation-name: titleChange;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes titleChange {
+    0% {
+        font-variation-settings: "TRMC" 0, "SKLD" 0, "SKLA" 0, "TRMG" 0, "TRME" 0;
+    }
+
+    100% {
+        font-variation-settings: "TRMC" 1000, "SKLD" 80, "SKLA" 200, "TRMG" 1000, "TRME" 1000;
+    }
+  }

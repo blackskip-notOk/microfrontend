@@ -1,14 +1,14 @@
 import { path } from '~pages/router';
 import type { FC } from 'react';
+import styles from './index.module.css';
 
 import { Link, Outlet } from 'react-router-dom';
 
 export const HomePage: FC = () => {
 	return (
-		<div>
-			<h1>Home Page</h1>
-			<h2>Home Page</h2>
-			<h3>Home Page</h3>
+		<main className={styles.container}>
+			<h1 className={styles.title}>Home Sweet Home</h1>
+			<h5>Home Page 🍊 🏯</h5>
 			<nav>
 				<ul>
 					<li>
@@ -17,6 +17,6 @@ export const HomePage: FC = () => {
 				</ul>
 			</nav>
 			<Outlet />
-		</div>
+		</main>
 	);
 };

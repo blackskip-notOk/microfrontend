@@ -76,7 +76,6 @@
 					"background-color": "<oklch>"
 				}
 			}
-		],
-		"function-no-unknown": [true, ["tech"]]
+		]
 	}
 }
