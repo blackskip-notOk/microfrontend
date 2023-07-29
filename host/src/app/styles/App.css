@@ -1,27 +1,31 @@
 @font-face {
   font-family: Tektur;
-  src: url('../fonts/Tektur_Condensed-Regular.ttf');
   font-weight: normal;
+  src: url('../fonts/Tektur_Condensed-Regular.ttf');
 }
 
 body {
-  font-family: Tektur;
+  font-family: Tektur, sans-serif;
+  font-smooth: always;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @supports (font-variation-settings: normal) {
   @font-face {
     font-family: Decovar;
-    src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype-variations');
     font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "TRMK" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 0, "SKLB" 0, "TRMG" 0, "TRME" 0;
     font-weight: 100 1000;
     font-stretch: 25% 151%;
+    src: url('../fonts/DecovarAlpha-VF.ttf') format('truetype-variations');
   }
 
   @font-face {
     font-family: MartianMonoVF;
-    src: url('../fonts/MartianMonoVF.woff2') format('woff2-variations');
     font-weight: 100 800;
     font-stretch: 75% 112.5%;
+    src: url('../fonts/MartianMonoVF.woff2') format('woff2-variations');
   }
 
   @font-face {
@@ -33,6 +37,14 @@ body {
     font-family: Noto;
     src: url('../fonts/NotoColorEmoji-Regular.ttf') format('truetype-variations');
   }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
 }
 
 h1 {

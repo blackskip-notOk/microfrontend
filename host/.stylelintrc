@@ -76,6 +76,14 @@
 					"background-color": "<oklch>"
 				}
 			}
+		],
+		"property-no-unknown": [
+			true,
+			{
+				"ignoreProperties": [
+					"font-smooth"
+				]
+			}
 		]
 	}
 }

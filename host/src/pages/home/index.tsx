@@ -8,8 +8,7 @@ export const HomePage: FC = () => {
 	return (
 		<main className={styles.container}>
 			<h1 className={styles.title}>Home Sweet Home</h1>
-			<h5>Home Page 🍊 🏯</h5>
-			<nav>
+			<nav className={styles.navbar}>
 				<ul>
 					<li>
 						<Link to={path.serverInfo}>Server Info Page</Link>
@@ -17,6 +16,7 @@ export const HomePage: FC = () => {
 				</ul>
 			</nav>
 			<Outlet />
+			<footer className={styles.footer}>Footer</footer>
 		</main>
 	);
 };
