@@ -9,6 +9,9 @@ export const NavbarWidget: FC = () => {
 		<nav className={navbar}>
 			<ul>
 				<li>
+					<Link to={path.login}>Login Page</Link>
+				</li>
+				<li>
 					<Link to={path.serverInfo}>Server Info Page</Link>
 				</li>
 			</ul>

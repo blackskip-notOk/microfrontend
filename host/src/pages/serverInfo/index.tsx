@@ -1,7 +1,7 @@
 // import { useGetServerInfo } from '~entities/server/api';
 import { FC } from 'react';
 
-export const ServerInfo: FC = () => {
+export const ServerInfoPage: FC = () => {
 	// const { data } = useGetServerInfo();
 
 	return <section>
