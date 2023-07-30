@@ -1,0 +1,35 @@
+.header {
+    grid-area: header;
+    justify-self: center;
+
+    & .title {
+        animation-name: titleChange;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
+
+    @media screen and (prefers-reduced-motion: reduce) {
+        & .title {
+            animation: none;
+        }
+    }
+}
+
+@keyframes titleChange {
+    0% {
+        font-variation-settings: "TRMC" 0, "SKLD" 0, "SKLA" 0, "TRMG" 0, "TRME" 0;
+        color: var(--text1);
+    }
+
+    50% {
+        font-variation-settings: "TRMC" 500,"SKLD" 50,"SKLA" 500,"TRMG" 500,"TRME" 500;
+        color: var(--text2);
+    }
+
+    100% {
+        font-variation-settings: "TRMC" 0, "SKLD" 0, "SKLA" 0, "TRMG" 0, "TRME" 0;
+        color: var(--text3);
+    }
+}
