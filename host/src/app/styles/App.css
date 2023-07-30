@@ -51,6 +51,7 @@ h1 {
   font-family: Decovar, sans-serif;
   font-size: 64px;
   font-variation-settings: "BLDA" 0, "TRMD" 0, "TRMC" 0, "SKLD" 0, "TRML" 0, "SKLA" 0, "TRMF" 0, "BLDB" 0, "WMX2" 0, "TRMB" 0, "TRMA" 1000, "SKLB" 0, "TRMG" 0, "TRME" 0;
+  color: var(--primary)
 }
 
 h2 {

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.29.23",
@@ -32,6 +33,7 @@
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
     "lightningcss": "^1.21.5",
     "stylelint": "^15.10.1",
     "stylelint-a11y": "^1.2.3",
@@ -41,7 +43,8 @@
     "stylelint-high-performance-animation": "^1.8.0",
     "stylelint-no-unsupported-browser-features": "^7.0.0",
     "stylelint-selector-no-empty": "^1.0.9",
-    "typescript": "^5.0.2",
+    "stylelint-use-nesting": "^4.1.0",
+    "typescript": "^5.1.6",
     "typescript-plugin-css-modules": "^5.0.1",
     "vite": "^4.4.0",
     "vite-plugin-lightningcss": "^0.0.5"

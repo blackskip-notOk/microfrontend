@@ -1,13 +1,15 @@
 .container {
     display: grid;
     grid-template-areas:
-    'title title'
+    'header header'
     'nav content'
     'footer footer';
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content 1fr max-content;
 
     height: 100vh;
+
+    background-color: var(--primary);
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -20,18 +22,18 @@
     }
 }
 
-.title {
-    grid-area: title;
+.header {
+    grid-area: header;
     justify-self: center;
 
-    font-family: Decovar, sans-serif;
-    font-size: 64px;
-
-    animation-name: titleChange;
-    animation-duration: 3s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
+    & .title {
+        color: red;
+        animation-name: titleChange;
+        animation-duration: 3s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+    }
 }
 
 @keyframes titleChange {
@@ -39,8 +41,12 @@
         font-variation-settings: "TRMC" 0, "SKLD" 0, "SKLA" 0, "TRMG" 0, "TRME" 0;
     }
 
-    100% {
+    50% {
         font-variation-settings: "TRMC" 500,"SKLD" 50,"SKLA" 500,"TRMG" 500,"TRME" 500;
+    }
+
+    100% {
+        font-variation-settings: "TRMC" 0, "SKLD" 0, "SKLA" 0, "TRMG" 0, "TRME" 0;
     }
   }
 

@@ -1963,6 +1963,11 @@ human-signals@^4.3.0:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-4.3.1.tgz#ab7f811e851fca97ffbd2c1fe9a958964de321b2"
   integrity sha512-nZXjEF2nbo7lIw3mgYjItAfgQXog3OjJogSbKa2CQIIvSGWcKgeJnQlNXip6NglNzYH45nSRiEVimMvYL8DDqQ==
 
+husky@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-8.0.3.tgz#4936d7212e46d1dea28fef29bb3a108872cd9184"
+  integrity sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg==
+
 iconv-lite@^0.6.3:
   version "0.6.3"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
@@ -3474,6 +3479,11 @@ stylelint-selector-no-empty@^1.0.9:
   resolved "https://registry.yarnpkg.com/stylelint-selector-no-empty/-/stylelint-selector-no-empty-1.0.9.tgz#e12308f918db40cfff3c98beca7c7f4274e4ea3a"
   integrity sha512-MmtOZNOj0dr/PFBxiSBZHtKq+rCTtdkU54E+AkzfHH0wegKKSihMax89PymBXGFboREHu8WaJL9xhh2ttPgkEQ==
 
+stylelint-use-nesting@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/stylelint-use-nesting/-/stylelint-use-nesting-4.1.0.tgz#77d36f05da74be68312af402f04ea13555783034"
+  integrity sha512-DDI+T/8kGIxdcfPClxp/oS2cFSWvd+hoV54clF7lnrlSvYHOQouaxgMOuPmkIQig0suss/PrAw5GwBYoSu8WoQ==
+
 stylelint@^15.10.1:
   version "15.10.2"
   resolved "https://registry.yarnpkg.com/stylelint/-/stylelint-15.10.2.tgz#0ee5a8371d3a2e1ff27fefd48309d3ddef7c3405"
@@ -3748,7 +3758,7 @@ typescript-plugin-css-modules@^5.0.1:
     stylus "^0.59.0"
     tsconfig-paths "^4.1.2"
 
-typescript@^5.0.2:
+typescript@^5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.1.6.tgz#02f8ac202b6dad2c0dd5e0913745b47a37998274"
   integrity sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==
