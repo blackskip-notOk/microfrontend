@@ -8,6 +8,9 @@ export const NavbarWidget: FC = () => {
 	return (
 		<nav className={navbar}>
 			<ul>
+			<li>
+					<Link to={path.signup}>Signup Page</Link>
+				</li>
 				<li>
 					<Link to={path.login}>Login Page</Link>
 				</li>
