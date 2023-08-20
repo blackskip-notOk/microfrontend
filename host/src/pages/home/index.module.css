@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-areas:
-    'header header'
+    'icon header'
     'nav content'
     'footer footer';
     grid-template-columns: max-content 1fr;
@@ -34,6 +34,15 @@
 	100% {
 		background-position: 100% 50%;
 	}
+}
+
+.icon {
+    grid-area: icon;
+    align-self: center;
+    justify-self: center;
+
+    width: 90%;
+    height: 90%;
 }
 
 .content {

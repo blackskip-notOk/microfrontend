@@ -1,24 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
-import { router } from './pages/router/router';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+import { router } from './shared/index';
 import './app/index.css';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-const queryClient = new QueryClient({
+const client = new ApolloClient({
+	uri: 'https://5.164.180.249/graphql',
+	cache: new InMemoryCache(),
 	defaultOptions: {
-		queries: {
-			staleTime: 60 * 60,
+		watchQuery: {
+			fetchPolicy: 'network-only',
+			nextFetchPolicy: 'cache-first',
 		},
 	},
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
-		<QueryClientProvider client={queryClient}>
+		<ApolloProvider client={client}>
 			<RouterProvider router={router} />
-			<ReactQueryDevtools initialIsOpen={false} />
-		</QueryClientProvider>
+		</ApolloProvider>
 	</React.StrictMode>,
 );

@@ -3,13 +3,8 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import { SignupFormFields, SignupFormSchema, TSignupForm } from './types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { loginFormDefaultValues } from './constants';
-import { useCreateUser, useGetUsers } from '~entities/users/api';
 
 export const SignupPage: FC = () => {
-	const { data } = useGetUsers();
-
-	const { mutate } = useCreateUser();
-
 	const {
 		register,
 		handleSubmit,
@@ -22,15 +17,11 @@ export const SignupPage: FC = () => {
 	});
 
 	const onSubmit: SubmitHandler<TSignupForm> = formData => {
-		mutate(formData);
+		// mutate(formData);
 	};
 
 	return (
 		<section>
-			{data?.length &&
-				data.map(user => {
-					return <div>{user.login}</div>;
-				})}
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<label htmlFor={SignupFormFields.enum.login}>
 					<input

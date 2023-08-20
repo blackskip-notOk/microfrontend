@@ -1,7 +1,3 @@
-export const keys = {
-	users: 'users',
-} as const;
-
 export const usersApi = {
 	createUser: 'users/create-user',
 	getUsers: 'users',
