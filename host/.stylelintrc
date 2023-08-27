@@ -68,7 +68,6 @@
 		"shorthand-property-no-redundant-values": true,
 		"unit-no-unknown": true,
 		"plugin/stylelint-selector-no-empty": true,
-		"gamut/color-no-out-gamut-range": true,
 		"declaration-property-value-no-unknown": [
 			true,
 			{
@@ -86,6 +85,16 @@
 				]
 			}
 		],
-		"csstools/use-nesting": null
+		"a11y/no-outline-none": null,
+		"csstools/use-nesting": null,
+		"gamut/color-no-out-gamut-range": true,
+		"function-disallowed-list": [
+			"rgba",
+			"hsla",
+			"rgb",
+			"hsl"
+		],
+		"color-function-notation": "modern",
+		"color-no-hex": true
 	}
 }
