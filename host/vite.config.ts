@@ -2,6 +2,7 @@ import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 import { setProxyConfig } from './config/vite/proxyServer';
 import { viteAliases } from './config/vite/aliases';
+import federation from '@originjs/vite-plugin-federation';
 // import lightningcss from 'vite-plugin-lightningcss';
 
 export default defineConfig(({ command, mode }) => {
@@ -19,7 +20,16 @@ export default defineConfig(({ command, mode }) => {
 		},
 		logLevel: 'error',
 		// plugins: [react(), lightningcss()],
-		plugins: [react()],
+		plugins: [
+			react(),
+			federation({
+				name: 'host',
+				remotes: {
+					remoteApp: 'http://localhost:6001/assets/remoteEntry.js',
+				},
+				shared: ['react', 'react-dom'],
+			}),
+		],
 		envDir: './config/env',
 		envPrefix: 'HOST_APP_',
 		server: {
@@ -30,7 +40,11 @@ export default defineConfig(({ command, mode }) => {
 			proxy: setProxyConfig(mode),
 		},
 		build: {
-			cssMinify: 'lightningcss',
+			// cssMinify: 'lightningcss',
+			modulePreload: false,
+			target: 'esnext',
+			minify: false,
+			cssCodeSplit: false,
 		},
 		resolve: {
 			alias: viteAliases,
